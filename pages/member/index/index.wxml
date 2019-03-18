@@ -239,7 +239,7 @@
         <view class="fui-cell-remark"></view>
       </navigator>
       <!--要改条件的这个-->
-      <navigator wx:if="{{member.hasFullback}}" class="fui-cell" hover-class="none" url="../../../commission/pages/return/index" open-type="navigate">
+      <navigator wx:if="{{member.hasFullback}}" class="fui-cell" hover-class="none" url="/pages/commission/return/index" open-type="navigate">
         <view class="fui-cell-icon">
           <text class="icox icox-xiaofei1"></text>
         </view>

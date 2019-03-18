@@ -61,7 +61,7 @@ Page({
       }
       if (res.error == 82025){
         wx.redirectTo({
-          url: '../../../commission/pages/register/index',
+          url: '/pages/commission/register/index',
         })
       }
       wx.setNavigationBarTitle({

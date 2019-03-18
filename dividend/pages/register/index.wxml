@@ -69,7 +69,7 @@
     </view>
 
   </view>
-  <navigator url='../../../commission/pages/index' hover-class='none' open-type='navigate' class="btn block" style="background: #1b1a20; color: #cfa943; border-color: #1b1a20;">继续去招募</navigator>
+  <navigator url='/pages/commission/index' hover-class='none' open-type='navigate' class="btn block" style="background: #1b1a20; color: #cfa943; border-color: #1b1a20;">继续去招募</navigator>
 </block>
 
 

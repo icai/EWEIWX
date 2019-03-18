@@ -54,7 +54,7 @@
         <block>
           <swiper-item class='fui-picturew'   wx:for="{{diyitem.data_temp}}" wx:for-index="childid" wx:for-item="childitem">
           <view class='item' class='item' wx:for="{{childitem}}" wx:for-index="pic_index" wx:for-item="pic_item">
-            <view class='navigator' bindtap='navigate' data-url='{{pic_item.linkurl=="/pages/commission/index"?"../../commission/pages/index":pic_item.linkurl}}' data-phone='{{pic_item.phone}}' data-appid='{{pic_item.appid}}' data-appurl='{{pic_item.appurl}}' style='padding:{{diyitem.style.paddingtop==0?0:diyitem.style.paddingtop + "rpx"}} {{diyitem.style.paddingleft==0?0:diyitem.style.paddingleft + "rpx"}}'>
+            <view class='navigator' bindtap='navigate' data-url='{{pic_item.linkurl=="/pages/commission/index"?"/pages/commission/index":pic_item.linkurl}}' data-phone='{{pic_item.phone}}' data-appid='{{pic_item.appid}}' data-appurl='{{pic_item.appurl}}' style='padding:{{diyitem.style.paddingtop==0?0:diyitem.style.paddingtop + "rpx"}} {{diyitem.style.paddingleft==0?0:diyitem.style.paddingleft + "rpx"}}'>
                 <image class='{{diyitem.style.navstyle}}' src="{{pic_item.imgurl}}" mode='widthFix'></image>
             </view>
             </view>
@@ -64,7 +64,7 @@
     </block>
     <block wx:else>
       <view style='padding:{{diyitem.style.paddingtop==0?0:diyitem.style.paddingtop + "rpx"}} {{diyitem.style.paddingleft==0?0:diyitem.style.paddingleft + "rpx"}};box-sizing:border-box;' class='item' wx:for='{{diyitem.data}}' wx:for-index='index' wx:for-item='childitem' >
-        <view class='navigator' bindtap='navigate' data-url="{{childitem.linkurl=='/pages/commission/index'?'../../commission/pages/index':childitem.linkurl}}" data-phone='{{childitem.phone}}' data-appid='{{childitem.appid}}' style='padding:{{diyitem.style.paddingtop==0?0:diyitem.style.paddingtop + "rpx"}} {{diyitem.style.paddingleft==0?0:diyitem.style.paddingleft + "rpx"}}'>
+        <view class='navigator' bindtap='navigate' data-url="{{childitem.linkurl=='/pages/commission/index'?'/pages/commission/index':childitem.linkurl}}" data-phone='{{childitem.phone}}' data-appid='{{childitem.appid}}' style='padding:{{diyitem.style.paddingtop==0?0:diyitem.style.paddingtop + "rpx"}} {{diyitem.style.paddingleft==0?0:diyitem.style.paddingleft + "rpx"}}'>
             <image src="{{childitem.imgurl}}" mode='widthFix' style='padding:0;margin:0'></image>
         </view>
         <!-- <view class='navigator' bindtap='navigate' data-url="{{childitem.linkurl}}" data-phone='{{childitem.phone}}' data-appid='{{childitem.appid}}' style='padding:{{diyitem.style.paddingtop==0?0:diyitem.style.paddingtop + "rpx"}} {{diyitem.style.paddingleft==0?0:diyitem.style.paddingtop + "rpx"}};'>
