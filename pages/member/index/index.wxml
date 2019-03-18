@@ -112,7 +112,7 @@
         <view class="fui-cell-text">我的会员卡</view>
         <view class="fui-cell-remark"></view>
       </navigator>
-      <navigator class="fui-cell" hover-class="none" url="../../../bargain/index/index" wx:if="{{ member.bargain }}">
+      <navigator class="fui-cell" hover-class="none" url="/pages/bargain/index/index" wx:if="{{ member.bargain }}">
         <view class="fui-cell-icon">
           <text class="icox icox-bargain"></text>
         </view>

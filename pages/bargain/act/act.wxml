@@ -1,6 +1,6 @@
 <view class='page navbar'>
   <view class='fui-goods-group' wx:if="{{ goods }}">
-    <navigator class="fui-goods-item" wx:for="{{ goods }}" url="../bargain/bargain?id={{ item[0]['actor_id'] }}&mid={{ mid }}" hover-class="none" open-type="navigate">
+    <navigator class="fui-goods-item" wx:for="{{ goods }}" url="/pages/bargain/bargain?id={{ item[0]['actor_id'] }}&mid={{ mid }}" hover-class="none" open-type="navigate">
         <view class="image" style="background-image:url({{ item[0]['thumb'] }})"></view>
       <view class="detail goods_list_detail">
         <view class="name">{{ item[0]['title'] }}</view>

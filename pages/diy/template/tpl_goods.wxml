@@ -1,6 +1,6 @@
 <view class='fui-goods-group {{diyitem.style.liststyle}}'  wx:if='{{diyitem.params.goodsscroll!=1}}' style='background:{{diyitem.style.background}}'>
     <view class='fui-goods-item' wx:for='{{diyitem.data}}' wx:for-index='childid' wx:for-item='childitem'>
-        <navigator url="{{ childitem.bargain > 0?'../../../bargain/detail/detail?id='+childitem.bargain : '/pages/goods/detail/index?id='+childitem.gid}}" class='image {{diyitem.params.showicon=="1"?diyitem.style.iconstyle:""}}' data-text='{{diyitem.style.goodsicon}}' style='background-image:url({{diyitem.params.showicon=="2"?diyitem.params.goodsiconsrc:childitem.thumb}})'>
+        <navigator url="{{ childitem.bargain > 0?'/pages/bargain/detail/detail?id='+childitem.bargain : '/pages/goods/detail/index?id='+childitem.gid}}" class='image {{diyitem.params.showicon=="1"?diyitem.style.iconstyle:""}}' data-text='{{diyitem.style.goodsicon}}' style='background-image:url({{diyitem.params.showicon=="2"?diyitem.params.goodsiconsrc:childitem.thumb}})'>
         
         <!--营销图标  -->
             <view class='goodsicon' wx:if='{{diyitem.params.showicon=="2"}}' style='position:relative;width:{{iconwidth}}px;height:{{iconheight}}px'>
@@ -15,7 +15,7 @@
             <view wx:if='{{childitem.cansee>0 && childitem.seecommission>0}}' class='goods-Commission'>{{childitem.seetitle}}￥{{childitem.seecommission}}</view>        
         </navigator>
         <view class='detail'>
-            <navigator url="{{ childitem.bargain > 0?'../../../bargain/detail/detail?id='+childitem.bargain : '/pages/goods/detail/index?id='+childitem.gid}}" class='name' wx-if='{{diyitem.params.showtitle=="1"}}' style='color:{{diyitem.style.titlecolor}}'>
+            <navigator url="{{ childitem.bargain > 0?'/pages/bargain/detail/detail?id='+childitem.bargain : '/pages/goods/detail/index?id='+childitem.gid}}" class='name' wx-if='{{diyitem.params.showtitle=="1"}}' style='color:{{diyitem.style.titlecolor}}'>
             <image class='bargain_label' wx:if="{{ childitem.bargain > 0 }}" src='/static/images/label.png'></image>
              <text class="cycle-tip" wx:if="{{ childitem.ctype == 9 }}">周期购</text> 
             <text>{{childitem.title}} </text>   
@@ -31,7 +31,7 @@
                 <text class='text' style='color:{{diyitem.style.pricecolor}}'>￥{{childitem.price}}</text>
                 <navigator class='buy buybtnbtn buybtn-1' wx-if="{{childitem.ctype == 9 && childitem.bargain == 0}}" style='' url="/pages/goods/detail/index?id={{childitem.gid}}" data-buytype="buy" data-id ='{{childitem.gid}}'>详情</navigator>
                 <navigator class='buy buybtnbtn buybtn-1' wx-if="{{childitem.ctype == 5 && childitem.bargain == 0}}" style='' url="/pages/goods/detail/index?id={{childitem.gid}}" data-buytype="buy" data-id ='{{childitem.gid}}'>详情</navigator>
-                <navigator class='buy buybtnbtn buybtn-1' wx-if="{{childitem.bargain > 0}}" style='' url="../../../bargain/detail/detail?id={{childitem.bargain}}" data-buytype="buy" data-id ='{{childitem.gid}}'>砍价</navigator>
+                <navigator class='buy buybtnbtn buybtn-1' wx-if="{{childitem.bargain > 0}}" style='' url="/pages/bargain/detail/detail?id={{childitem.bargain}}" data-buytype="buy" data-id ='{{childitem.gid}}'>砍价</navigator>
                 <text class='buy buybtnbtn {{diyitem.style.buystyle}}' wx-if="{{diyitem.style.buystyle=='buybtn-1' && childitem.ctype != 9 && (childitem.bargain == 0 || childitem.bargain == null ) && childitem.ctype != 5}}" style='color:{{diyitem.style.buybtncolor}};border-color:{{diyitem.style.buybtncolor}}' bindtap='selectPicker' data-buytype="buy" data-id ='{{childitem.gid}}' data-home='1'>购买</text>
                 <text class='buy buybtnbtn {{diyitem.style.buystyle}}' wx-if="{{diyitem.style.buystyle=='buybtn-2' && childitem.ctype != 9 && (childitem.bargain == 0 || childitem.bargain == null ) && childitem.ctype != 5}}" style='background:{{diyitem.style.buybtncolor}};border-color:{{diyitem.style.buybtncolor}}' bindtap='selectPicker' data-buytype="buy" data-id ='{{childitem.gid}}' data-home='1'>购买</text>
                 <text class='buy icox icox-cartfill buybtnbtn {{diyitem.style.buystyle}}' wx-if="{{diyitem.style.buystyle=='buybtn-3' && childitem.ctype != 9 && childitem.ctype != 5 && childitem.bargain == 0}}" style='background:{{diyitem.style.buybtncolor}};border-color:{{diyitem.style.buybtncolor}}' bindtap='selectPicker' data-buytype="buy" data-id ='{{childitem.gid}}'></text>
@@ -51,7 +51,7 @@ circular='true' interval="{{interval}}" duration="{{duration}}" current='{{diyit
   <block>
     <swiper-item wx:for="{{diyitem.data_temp}}" wx:for-index="childid" wx:for-item="childitem" next-margin='10px'>
        <view class='fui-goods-item'  wx:for='{{childitem}}' wx:for-index='childitemid' wx:for-item='childitems'>
-        <navigator url="{{ childitems.bargain > 0?'../../../bargain/detail/detail?id='+childitems.bargain : '/pages/goods/detail/index?id='+childitems.gid}}" open-type="navigate" class='image {{diyitem.params.showicon=="1"?diyitem.style.iconstyle:""}}' data-text='{{diyitem.style.goodsicon}}' style='background-image:url({{diyitem.params.showicon=="2"?diyitem.params.goodsiconsrc:childitems.thumb}})'>
+        <navigator url="{{ childitems.bargain > 0?'/pages/bargain/detail/detail?id='+childitems.bargain : '/pages/goods/detail/index?id='+childitems.gid}}" open-type="navigate" class='image {{diyitem.params.showicon=="1"?diyitem.style.iconstyle:""}}' data-text='{{diyitem.style.goodsicon}}' style='background-image:url({{diyitem.params.showicon=="2"?diyitem.params.goodsiconsrc:childitems.thumb}})'>
         <!--营销图标 -->
             <view class='goodsicon' wx:if='{{diyitem.params.showicon=="2"}}' style='position:relative;width:{{iconwidth}}px;height:{{iconheight}}px'>
                 <image wx-if='{{diyitem.params.iconposition=="left top"}}' class='left top' mode='widthFix' src="{{childitem.thumb}}" style='width:{{diyitem.style.iconzoom}}%; left:{{diyitem.style.iconpaddingleft}}rpx;top:{{diyitem.style.iconpaddingtop}}rpx' bindload='goodsicon'></image>
@@ -65,7 +65,7 @@ circular='true' interval="{{interval}}" duration="{{duration}}" current='{{diyit
             <view wx:if='{{childitems.cansee>0 && childitems.seecommission>0}}' class='goods-Commission'>{{childitems.seetitle}}￥{{childitems.seecommission}}</view>        
         </navigator>
         <view class='detail'>
-            <navigator url="{{ childitems.bargain > 0?'../../../bargain/detail/detail?id='+childitems.bargain : '/pages/goods/detail/index?id='+childitems.gid}}" open-type="navigate" class='name' wx-if='{{diyitem.params.showtitle=="1"}}' style='color:{{diyitem.style.titlecolor}}'>
+            <navigator url="{{ childitems.bargain > 0?'/pages/bargain/detail/detail?id='+childitems.bargain : '/pages/goods/detail/index?id='+childitems.gid}}" open-type="navigate" class='name' wx-if='{{diyitem.params.showtitle=="1"}}' style='color:{{diyitem.style.titlecolor}}'>
                 {{childitems.title}}
             </navigator>
             <!--原价销量  -->

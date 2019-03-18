@@ -53,14 +53,14 @@
       </block>
       <template name="tpl_list">
           <view class="fui-goods-item" data-goodsid="{{item.id}}" data-type="{{item.type}}">
-              <navigator url="{{ item.bargain > 0?'../../bargain/detail/detail?id='+item.bargain : '/pages/goods/detail/index?id='+item.id}}" open-type="navigate">
+              <navigator url="{{ item.bargain > 0?'/pages/bargain/detail/detail?id='+item.bargain : '/pages/goods/detail/index?id='+item.id}}" open-type="navigate">
                   <view class="image" style="background-image:url('{{item.thumb}}');">
                       <block wx:if="{{item.total<=0}}">
                       <view class="salez" style="background-image: url('{php echo tomedia($_W['shopset']['shop']['saleout'])}'); "></view></block>
                   </view>
               </navigator>
               <view class="detail">
-                  <navigator url="{{ item.bargain > 0?'../../bargain/detail/detail?id='+item.bargain : '/pages/goods/detail/index?id='+item.id}}" open-type="navigate">
+                  <navigator url="{{ item.bargain > 0?'/pages/bargain/detail/detail?id='+item.bargain : '/pages/goods/detail/index?id='+item.id}}" open-type="navigate">
                       <view class="name">
                           <image class='bargain_label' wx:if="{{ item.bargain > 0 }}" src='/static/images/label.png'></image>
                           <block wx:if="{{item.ispresell==1}}"><text class="fui-tag fui-tag-danger">预售</text></block>

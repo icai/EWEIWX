@@ -53,7 +53,7 @@ Page({
       if(result.error == 0){
         if (result.unequalMid == 1){
           wx.navigateTo({
-            url: '../bargain/bargain?id=' + result.id + '&mid=' + result.mid,
+            url: '/pages/bargain/bargain?id=' + result.id + '&mid=' + result.mid,
           })
         }
     
@@ -172,7 +172,7 @@ type-------类型
     var mid = $this.data.mid;
     return {
       title: '帮砍价',
-      path: '../bargain/bargain?id=' + id + '&mid=' + mid,
+      path: '/pages/bargain/bargain?id=' + id + '&mid=' + mid,
       success: function (res) {
         // 转发成功
       },
